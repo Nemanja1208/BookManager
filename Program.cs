@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             BookManager bookManager = new BookManager();
             bool keepRunning = true;
 
@@ -12,7 +11,7 @@
             {
                 // Jag skapar en meny
                 Console.Clear();
-                DisplayMeny();
+                Helper.DisplayMeny();
 
                 // Läs användarens val
                 string usersChoice = Console.ReadLine()!;
@@ -41,36 +40,6 @@
                         break;
                 }
             }
-            
-
-
-
-            //Skapa en konsolapplikation som hanterar en samling böcker.
-            //Skapa en klass Bok med egenskaper:
-            //Titel(string)
-            //Författare(string)
-            //YearPublished(int)
-            //Skapa en List < Bok > för att lagra böcker.
-            //I menyn ska användaren kunna:
-            //📗 Lägga till en bok(be om titel, författare och årtal).
-            //📖 Visa alla böcker i samlingen.
-            //🔍 Söka efter en bok genom titel och visa dess detaljer.
-
-            //💡 Tips:
-            //Använd foreach för att visa alla böcker.
-            //Använd if och ToLower() för enkel sökning utan att vara känslig för stora / små bokstäver.
         }
-
-        private static void DisplayMeny()
-        {
-            Console.WriteLine("Välkommen till bokhanteraren!");
-
-            Console.WriteLine("Välj ett alternativ:");
-            Console.WriteLine("1 : Lägga till en bok");
-            Console.WriteLine("2 : Visa alla böcker");
-            Console.WriteLine("3 : Söka efter en bok genom titel");
-            Console.WriteLine("4 : Avsluta");
-        }
-
     }
 }
