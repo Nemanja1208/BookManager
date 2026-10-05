@@ -39,7 +39,7 @@
             Console.WriteLine("Ange titeln på boken du vill söka efter:");
             string titleToSearch = Console.ReadLine()!;
 
-            //allaBöckerIHelaBiblioteket.First().Title = titleToSearch;
+            //allaBöckerIHelaBiblioteket.First().Title = titleToSearch; --- LINQ
             List<Book> allaBöckerSomInnehållerMatchandeTitle = allaBöckerIHelaBiblioteket.FindAll(book => book.Title.ToLower().Contains(titleToSearch.ToLower()));
             allaBöckerSomInnehållerMatchandeTitle.ForEach(book => book.DisplayBookInfo());
             Console.WriteLine("Tryck enter för att komma tillbaka till meny");
